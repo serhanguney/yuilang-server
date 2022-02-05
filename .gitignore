@@ -1,0 +1,8 @@
+.idea
+build
+node_modules
+dist
+.env
+/src/**/*.js
+
+

@@ -1,0 +1,32 @@
+{
+  "uid": {
+    "cs": {
+      "categories": {
+        "office": {
+          "phrases": {
+            "asdasd-asdasd-asdasdasd": {
+              "phrase": "dejte mi vedet",
+              "inEnglish": "let me know",
+              "practiceCount": "0",
+              "dateAdded": "",
+              "type": "word"
+            },
+            "asdcsd-asdasd-asdasdasd": {
+              "phrase": "dejte mi vedet",
+              "inEnglish": "let me know",
+              "practiceCount": "0",
+              "dateAdded": "",
+              "type": "word"
+            }
+          },
+          "totalPracticeCount": 0
+        },
+        "conversation": {},
+        "reading": {}
+      },
+      "totalPracticeCount": 0
+    },
+    "italian": {
+    }
+  }
+}
