@@ -1,1 +1,1 @@
-web: node dist/app.js
+worker: node build/app.js
