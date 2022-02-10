@@ -6,8 +6,9 @@
       "target": "es2017",
       "moduleResolution": "node",
       "emitDecoratorMetadata": true,
-      "experimentalDecorators": true
-  },
+      "experimentalDecorators": true,
+      "skipLibCheck": true
+    },
   "exclude": [
     "node_modules"
   ],
