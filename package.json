@@ -4,7 +4,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon -r dotenv/config src/app.ts",
-    "build": "rm -rf build && tsc --build"
+    "build": "rm -rf build && tsc --build",
+    "postinstall": "tsc --build",
+    "start": "node dist/app.js"
+  },
+  "engines": {
+    "node": "16.8.0"
   },
   "keywords": [],
   "author": "",
