@@ -1,9 +1,7 @@
-import { BAD_REQUEST, DUPLICATED_ENTRY } from '../../utils/statusCodes';
 import { doc, setDoc } from 'firebase/firestore';
-import { db } from '../../conf/config.firebase';
+import { db,  PhraseType, DatabaseModel  } from '../../conf/config.firebase';
 import { firebaseRouter } from './index';
 import { v4 as uuidv4 } from 'uuid';
-import { PhraseType, DatabaseModel } from '../../conf/config.firebase';
 
 firebaseRouter.post('/addPhrase', async (ctx) => {
 	try {

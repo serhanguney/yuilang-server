@@ -4,7 +4,7 @@ import { Context, DefaultState } from 'koa';
 export const firebaseRouter = new Router<DefaultState, Context>();
 import './practice';
 import './addCategory';
-import './addPhrase';
+import './addPhrase'
 import './getSession';
 import './demo';
 

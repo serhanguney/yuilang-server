@@ -2,7 +2,7 @@ import * as Koa from 'koa';
 import * as session from 'koa-session';
 import * as cors from 'koa2-cors';
 import * as koaBody from 'koa-body';
-import { firebaseRouter } from './routes/firebase';
+import { firebaseRouter } from './routes/firebase/index';
 import { authRoute } from './routes/auth';
 import { translationRouter } from './routes/translate';
 import { startFirebase } from './conf/config.firebase';
