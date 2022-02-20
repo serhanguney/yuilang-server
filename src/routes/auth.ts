@@ -7,13 +7,11 @@ import { getSessionDatabase } from './firebase/getSession';
 export const authRoute = new Router<DefaultState, Context>();
 
 authRoute.post('/signUp', async (ctx) => {
-	const { email, password } = ctx.request.body;
 	try {
-		const response = await createUserWithEmailAndPassword(auth, email, password);
-		ctx.response.body = response;
+		const { email, password } = JSON.parse(ctx.request.body);
+		ctx.body  = await createUserWithEmailAndPassword(auth, email, password);
 	} catch (err) {
-		ctx.response.body = err;
-		throw new Error(`Network problem with Firebase ${err}`);
+		ctx.throw(err)
 	}
 });
 
