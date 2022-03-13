@@ -25,7 +25,12 @@ app.use(async (ctx, next) => {
 	await startFirebase();
 	await next();
 });
-app.use(session(app));
+app.use(session({
+	secret: 'some secret',
+	rolling: true,
+	maxAge: 60 * 60 * 24,
+	signed: true
+},app));
 
 // Routes
 app.use(firebaseRouter.routes());

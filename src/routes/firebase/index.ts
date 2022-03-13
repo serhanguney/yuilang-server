@@ -5,7 +5,7 @@ export const firebaseRouter = new Router<DefaultState, Context>();
 import './practice';
 import './addCategory';
 import './addPhrase'
-import './getSession';
+import './getDatabase';
 import './demo';
 
 //TODO add /editPhrase

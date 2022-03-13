@@ -2,6 +2,7 @@ import { doc, setDoc } from 'firebase/firestore';
 import { db,  PhraseType, DatabaseModel  } from '../../conf/config.firebase';
 import { firebaseRouter } from './index';
 import { v4 as uuidv4 } from 'uuid';
+import {getDatabase} from "./getDatabase";
 
 firebaseRouter.post('/addPhrase', async (ctx) => {
 	try {
@@ -23,7 +24,7 @@ firebaseRouter.post('/addPhrase', async (ctx) => {
 			});
 			return;
 		}
-		const userDatabase: DatabaseModel = ctx.session.db;
+		const userDatabase: DatabaseModel = await getDatabase(uid);
 
 		const arrayOfEntries = Object.entries(userDatabase.categories[category].phrases);
 

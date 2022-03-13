@@ -2,18 +2,16 @@ import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../conf/config.firebase';
 import { firebaseRouter } from './index';
 
-firebaseRouter.post('/getSession', async (ctx) => {
+firebaseRouter.post('/getDatabase', async (ctx) => {
 	try {
 		const { uid } = JSON.parse(ctx.request.body);
-		const userDatabase = await getSessionDatabase(uid);
-		ctx.session.db = userDatabase;
-		ctx.body = ctx.session.db;
+		ctx.body= await getDatabase(uid);
 	} catch (err) {
 		ctx.throw(`Firebase error: ${err}`);
 	}
 });
 
-export const getSessionDatabase = async (uid) => {
+export const getDatabase = async (uid) => {
 	try {
 		const response = await getDocs(collection(db, uid));
 		let userDatabase;

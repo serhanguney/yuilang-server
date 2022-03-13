@@ -9,9 +9,6 @@
     "start": "node build/app.js",
     "bootstrap": "rm -rf node_modules && rm -rf yarn.lock && yarn install"
   },
-  "engines": {
-    "node": "16.8.0"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
