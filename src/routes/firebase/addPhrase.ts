@@ -60,9 +60,8 @@ firebaseRouter.post('/addPhrase', async (ctx) => {
 			},
 			practiceCount: 0
 		};
-		const response = await setDoc(doc(db, uid, language), docObject, { merge: true });
+		ctx.response.body = await setDoc(doc(db, uid, language), docObject, { merge: true });
 
-		ctx.response.body = response;
 	} catch (err) {
 		ctx.response.body = err;
 		ctx.throw(`There was a problem: ${err}`);
