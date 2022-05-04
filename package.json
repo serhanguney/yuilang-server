@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon -r dotenv/config src/app.ts",
+    "build": "rm -rf build && tsc --build",
     "postinstall": "tsc --build",
     "start": "node build/app.js",
     "bootstrap": "rm -rf node_modules && rm -rf yarn.lock && yarn install"
